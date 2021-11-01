@@ -50,13 +50,8 @@ void draw_lumi(Int_t t1=0, Int_t t2=0, TString LumInFile="lum0.csv")
   lumi1->SetMarkerColor(38);
   lumi1->Draw("lumi:time",Form("time>%d && time<%d",t1, t2 ),"same");
 
-  //PadLum.Update();
-  //PadLum.Modified();
   cc->cd();
 
-  //PadLum.SaveAs("/eos/user/i/ivovtin/LM_ECAL/RUN3/lumi_draw.eps");
-  //PadLum.SaveAs("/eos/user/i/ivovtin/LM_ECAL/RUN3/lumi_draw.png");
   cc->SaveAs("/eos/user/i/ivovtin/LM_ECAL/RUN3/lumi_draw.eps");
   cc->SaveAs("/eos/user/i/ivovtin/LM_ECAL/RUN3/lumi_draw.png");
-  //gPad->Print("/eos/user/i/ivovtin/LM_ECAL/RUN3/lumi_draw.png");
 }
